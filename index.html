@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Master Of Chess</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/style-sheet.css">
+</head>
+<body>
+    <div class="row" id="topic">play chess</div>
+    <div class="row">
+        <div class="col-xs-3" id="scoreboard">
+            <div class="row" id="score">INTRODUCTION</div>
+            <div id="introduction">Commands
+
+                Display Legal Move
+                King
+                Rook
+                Pawn
+                Div Chess! Oh yes.
+
+                Instructions:
+
+                - Click anywhere to move the player
+                - Click on the commands on the sidebar to display legal move
+                - Mouseover legal move positions to highlight
+
+                This little demo was made to see if I could make a chessboard procedurally with divs & javascript, rather than assets, then I added the functionality for fun
+
+                The legal moves assume the player is starting from the bottom.</div>
+
+        </div>
+        <div class="col-xs-9" id="main">
+            <div class="row">
+                <div class="col-xs-1"></div>
+                <div class="col-xs-1 symbole" style="text-align: center;color: black"><span>A</span></div>
+                <div class="col-xs-1 symbole" style="text-align: center;color: black"><span>B</span></div>
+                <div class="col-xs-1 symbole" style="text-align: center;color: black"><span>C</span></div>
+                <div class="col-xs-1 symbole" style="text-align: center;color: black"><span>D</span></div>
+                <div class="col-xs-1 symbole" style="text-align: center;color: black"><span>E</span></div>
+                <div class="col-xs-1 symbole" style="text-align: center;color: black"><span>F</span></div>
+                <div class="col-xs-1 symbole" style="text-align: center;color: black"><span>G</span></div>
+                <div class="col-xs-1 symbole" style="text-align: center;color: black"><span>H</span></div>
+                <div class="col-xs-1 symbole"></div>
+
+            </div>
+            <div class="row" id="r1">
+             <div class="col-xs-1" style="text-align: center;color:black "><span>1</span></div>
+                <div class="col-xs-1 square" id="a1" style="background-color:#66512c "><img src="Image/bR.png" class="img chesspieces" id="img1"></div>
+                <div class="col-xs-1  square" id="b1" style="background-color:white "><img src="Image/bN.png" class="img chesspieces" id="img2"></div>
+                <div class="col-xs-1  square" id="c1" style="background-color:#66512c "><img src="Image/bB.png" class="img chesspieces" id="img3"></div>
+                <div class="col-xs-1  square" id="d1" style="background-color:white "><img src="Image/wQ.png" class="img chesspieces" id="img4"></div>
+                <div class="col-xs-1  square" id="e1" style="background-color:#66512c "><img src="Image/wK.png" class="img chesspieces" id="img5"></div>
+                <div class="col-xs-1  square" id="f1" style="background-color:white "><img src="Image/bB.png" class="img chesspieces" id="img6"></div>
+                <div class="col-xs-1  square" id="g1" style="background-color:#66512c "><img src="Image/bN.png" class="img chesspieces" id="img7"></div>
+                <div class="col-xs-1  square" id="h1" style="background-color:white "><img src="Image/bR.png" class="img chesspieces" id="img8"></div>
+                <div class="col-xs-1" style="text-align: center;color:black "><span>1</span></div>
+            </div>
+
+            <div class="row" id="r2">
+                <div class="col-xs-1" style="text-align: center;color:black "><span>2</span></div>
+                <div class="col-xs-1 square" id="a2" style="background-color:white "><img src="Image/bP.png" class="img  chesspieces blackpond" id="img9"></div>
+                <div class="col-xs-1 square" id="b2" style="background-color:#66512c "><img src="Image/bP.png" class="img chesspieces blackpondk" id="img10"></div>
+                <div class="col-xs-1 square" id="c2" style="background-color:white "><img src="Image/bP.png" class="img chesspieces blackpond" id="img11"></div>
+                <div class="col-xs-1 square" id="d2" style="background-color:#66512c "><img src="Image/bP.png" class="img chesspieces blackpond" id="img12"></div>
+                <div class="col-xs-1 square" id="e2" style="background-color:white "><img src="Image/bP.png" class="img chesspieces blackpond" id="img13"></div>
+                <div class="col-xs-1 square" id="f2" style="background-color:#66512c "><img src="Image/bP.png" class="img chesspieces blackpond" id="img14"></div>
+                <div class="col-xs-1 square" id="g2" style="background-color:white "><img src="Image/bP.png" class="img chesspieces blackpond" id="img15"></div>
+                <div class="col-xs-1 square" id="h2" style="background-color:#66512c "><img src="Image/bP.png" class="img chesspieces blackpond" id="img16"></div>
+                <div class="col-xs-1" style="text-align: center;color:black "><span>2</span></div>
+            </div>
+
+
+            <div class="row" id="r3">
+                <div class="col-xs-1" style="text-align: center;color:black "><span>3</span></div>
+                <div class="col-xs-1 square" id="a3" style="background-color:#66512c "></div>
+                <div class="col-xs-1 square" id="b3" style="background-color:white "></div>
+                <div class="col-xs-1 square" id="c3" style="background-color:#66512c "></div>
+                <div class="col-xs-1 square" id="d3" style="background-color:white "></div>
+                <div class="col-xs-1 square" id="e3" style="background-color:#66512c "></div>
+                <div class="col-xs-1 square" id="f3" style="background-color:white "></div>
+                <div class="col-xs-1 square" id="g3" style="background-color:#66512c "></div>
+                <div class="col-xs-1 square" id="h3" style="background-color:white "></div>
+                <div class="col-xs-1" style="text-align: center;color:black "><span>4</span></div>
+            </div>
+
+
+            <div class="row" id="r4">
+                <div class="col-xs-1" style="text-align: center;color:black "><span>4</span></div>
+                <div class="col-xs-1 square" id="a4" style="background-color:white "></div>
+                <div class="col-xs-1 square" id="b4" style="background-color:#66512c "></div>
+                <div class="col-xs-1 square" id="c4" style="background-color:white "></div>
+                <div class="col-xs-1 square" id="d4" style="background-color:#66512c "></div>
+                <div class="col-xs-1 square" id="e4" style="background-color:white"></div>
+                <div class="col-xs-1 square" id="f4" style="background-color: #66512c "></div>
+                <div class="col-xs-1 square" id="g4" style="background-color:white "></div>
+                <div class="col-xs-1 square" id="h4" style="background-color:#66512c "></div>
+                <div class="col-xs-1" style="text-align: center;color:black "><span>4</span></div>
+            </div>
+
+            <div class="row" id="r5">
+                <div class="col-xs-1" style="text-align: center;color:black "><span>5</span></div>
+                <div class="col-xs-1 square" id="a5" style="background-color:#66512c "></div>
+                <div class="col-xs-1 square" id="b5" style="background-color:white "></div>
+                <div class="col-xs-1 square" id="c5" style="background-color:#66512c "></div>
+                <div class="col-xs-1 square" id="d5" style="background-color:white "></div>
+                <div class="col-xs-1 square" id="e5" style="background-color:#66512c"></div>
+                <div class="col-xs-1 square" id="f5" style="background-color:white "></div>
+                <div class="col-xs-1 square" id="g5" style="background-color:#66512c "></div>
+                <div class="col-xs-1 square" id="h5" style="background-color:white "></div>
+                <div class="col-xs-1" style="text-align: center;color:black "><span>5</span></div>
+            </div>
+
+
+            <div class="row" id="r6">
+                <div class="col-xs-1" style="text-align: center;color:black "><span>6</span></div>
+                <div class="col-xs-1 square" id="a6" style="background-color:white "></div>
+                <div class="col-xs-1 square" id="b6" style="background-color:#66512c "></div>
+                <div class="col-xs-1 square" id="c6" style="background-color:white "></div>
+                <div class="col-xs-1 square" id="d6" style="background-color:#66512c "></div>
+                <div class="col-xs-1 square" id="e6" style="background-color:white"></div>
+                <div class="col-xs-1 square" id="f6" style="background-color: #66512c "></div>
+                <div class="col-xs-1 square" id="g6" style="background-color:white "></div>
+                <div class="col-xs-1 square" id="h6" style="background-color:#66512c "></div>
+                <div class="col-xs-1" style="text-align: center;color:black "><span>6</span></div>
+            </div>
+
+            <div class="row" id="r7">
+                <div class="col-xs-1" style="text-align: center;color:black "><span>7</span></div>
+                <div class="col-xs-1 square" id="a7" style="background-color:#66512c "><img src="Image/wP.png" class="img chesspieces whitepond" id="img17"></div>
+                <div class="col-xs-1 square" id="b7" style="background-color:white "><img src="Image/wP.png" class="img chesspieces whitepond" id="img18"></div>
+                <div class="col-xs-1 square" id="c7" style="background-color:#66512c "><img src="Image/wP.png" class="img chesspieces whitepond" id="img19"></div>
+                <div class="col-xs-1 square" id="d7" style="background-color:white "><img src="Image/wP.png" class="img chesspieces whitepond" id="img20"></div>
+                <div class="col-xs-1 square" id="e7" style="background-color:#66512c "><img src="Image/wP.png" class="img chesspieces whitepond" id="img21"></div>
+                <div class="col-xs-1 square" id="f7" style="background-color:white "><img src="Image/wP.png" class="img chesspieces whitepond" id="img22"></div>
+                <div class="col-xs-1 square" id="g7" style="background-color:#66512c "><img src="Image/wP.png" class="img chesspieces whitepond" id="img23"></div>
+                <div class="col-xs-1 square" id="h7" style="background-color:white "><img src="Image/wP.png" class="img chesspieces whitepond" id="img24"></div>
+                <div class="col-xs-1" style="text-align: center;color:black "><span>7</span></div>
+            </div>
+
+
+            <div class="row" id="r8">
+                <div class="col-xs-1" style="text-align: center;color:black "><span>8</span></div>
+                <div class="col-xs-1 square" id="a8" style="background-color:white "><img src="Image/wR.png" class="img chesspieces" id="img25"></div>
+                <div class="col-xs-1 square" id="b8" style="background-color:#66512c "><img src="Image/wK.png" class="img chesspieces" id="img26"></div>
+                <div class="col-xs-1 square" id="c8" style="background-color:white "><img src="Image/wB.png" class="img chesspieces" id="img27"></div>
+                <div class="col-xs-1 square" id="d8" style="background-color:#66512c "><img src="Image/wQ.png" class="img chesspieces" id="img28"></div>
+                <div class="col-xs-1 square" id="e8" style="background-color:white "><img src="Image/wK.png" class="img chesspieces" id="img29"></div>
+                <div class="col-xs-1 square" id="f8" style="background-color:#66512c "><img src="Image/wB.png" class="img chesspieces" id="img30"></div>
+                <div class="col-xs-1 square" id="g8" style="background-color:white "><img src="Image/wK.png" class="img chesspieces" id="img31"></div>
+                <div class="col-xs-1 square" id="h8" style="background-color:#66512c "><img src="Image/wR.png" class="img chesspieces" id="img32"></div>
+                <div class="col-xs-1" style="text-align: center;color:black "><span>8</span></div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-xs-1"></div>
+                <div class="col-xs-1 symbole" style="text-align: center;color: black"><span>A</span></div>
+                <div class="col-xs-1 symbole" style="text-align: center;color: black"><span>B</span></div>
+                <div class="col-xs-1 symbole" style="text-align: center;color: black"><span>C</span></div>
+                <div class="col-xs-1 symbole" style="text-align: center;color: black"><span>D</span></div>
+                <div class="col-xs-1 symbole" style="text-align: center;color: black"><span>E</span></div>
+                <div class="col-xs-1 symbole" style="text-align: center;color: black"><span>F</span></div>
+                <div class="col-xs-1 symbole" style="text-align: center;color: black"><span>G</span></div>
+                <div class="col-xs-1 symbole" style="text-align: center;color: black"><span>H</span></div>
+                <div class="col-xs-1 symbole"></div>
+
+            </div>
+
+
+        </div>
+
+        <div class="col-xs-3" id="scoreboard1">
+            <div class="row" id="score1">SCORES</div>
+
+        </div>
+
+    </div>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/Home-Controller.js"></script>
+
+</body>
+</html>
